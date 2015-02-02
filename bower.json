@@ -1,7 +1,7 @@
 {
   "name": "angular-digest",
   "main": "angular-digest.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/vasiliy0s/angular-digest",
   "authors": [
     "Vasiliy Os <talk@vasiliy0s.com>"
