@@ -1,2 +1,2 @@
 # angular-digest
-Simple $digest servcie in AngularJS for apply $scope.$digest() if it possible.
+Simple service for safe run $scope.$digest() when it possible.
