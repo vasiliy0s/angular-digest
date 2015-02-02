@@ -1,0 +1,30 @@
+{
+  "name": "angular-digest",
+  "main": "angular-digest.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/vasiliy0s/angular-digest",
+  "authors": [
+    "Vasiliy Os <talk@vasiliy0s.com>"
+  ],
+  "description": "Simple service for safe run $scope.$digest()",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "angular.js",
+    "digest"
+  ],
+  "dependencies": {
+    "angular": "^1"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.sublime-*"
+  ]
+}
