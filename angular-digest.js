@@ -7,11 +7,14 @@
  * License: MIT
  */
 
-(function (angular) {
+;(function (angular) {
 
   'use strict';
 
+  // 'ngDigest' module.
   angular.module('ngDigest', [])
+
+    // '$digest' service.
     .service('$digest', function ($timeout) {
 
       var timeouts = {};
@@ -34,6 +37,21 @@
             digest($scope);
           }, parseInt(delay) || 1);
         }
+      };
+
+    })
+
+    // '$apply' service.
+    .service('$apply', function () {
+      
+      return function $apply ($scope, exp) {
+        if (!$scope.$$phase) {
+          return $scope.$apply(exp);
+        }
+        else if ('string' === typeof exp) {
+          return $scope.$eval(exp);
+        }
+        return exp($scope);
       };
 
     });
