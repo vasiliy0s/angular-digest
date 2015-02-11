@@ -42,6 +42,36 @@ angular.module('app')
   });
 ```
 
+Or use injected `$apply` service:
+```js
+angular.module('app')
+  .controller('myCtrl', function ($scope, $rootScope, $apply) {
+
+    var vm = this;
+
+    vm.model = {
+      baz: 'bash',
+    };
+
+    vm.check = fuction () {
+      if (vm.model.baz !== 'bash') {
+        // some controller actions with view updating here
+      }
+    };
+
+    $rootScope.$on('some:event', function () {
+      // directly service usage
+      $apply($scope, vm.check);
+    });
+
+    $rootScope.$on('some:another:event', function () {
+      // using service in '$scope.$eval' style
+      $apply($scope, 'vm.check');
+    });
+
+  });
+```
+
 ## Author
 [vasiliy0s](http://vasiliy0s.com)
 
